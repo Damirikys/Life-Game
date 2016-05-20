@@ -26,6 +26,7 @@ function CreateField() {
             field[i][j] = rnd, buffer[i][j] = rnd;
         }
     }
+    Print(field);
 }
 
 function CleanField() {
@@ -34,6 +35,7 @@ function CleanField() {
             field[i][j] = false, buffer[i][j] = false;
 
     Pause();
+    Print(field);
 }
 
 function Print(array) {
