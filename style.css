@@ -1,0 +1,111 @@
+#content{
+  width: 0px;
+  height: auto;
+  color: #53CC65;
+  line-height: 7px;
+  font-family: monospace;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+}
+
+button {
+  margin-top: 10px;
+  background: #263727;
+  border-radius: 10px;
+  color: #fff;
+  width: 115px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  outline: none;
+}
+button:hover{
+  background: #233224;
+}
+
+button:active{
+  background:#1B261C;
+}
+
+#body{
+  margin: 0 auto;
+  width: 360px;
+  text-align: center;
+  margin-top: 5%;
+}
+body{background: #274028;}
+h1{
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 60px;
+}
+h2 {
+  font-family: monospace;
+  color: #708B71;
+  margin-top: -45px;
+}
+
+cell {
+  cursor: default;
+  min-width: 7px!important;
+  max-height: 7px!important;
+  color: rgba(0, 0, 0, 0);
+}
+
+cell.false {
+  background: #274028;
+}
+
+cell.true {
+  background: #53CC65;
+}
+
+cell:hover {
+  background:#fff!important;
+}
+
+.file-upload {
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  background: #325434;
+  border-radius: 7px;
+  padding: 8px 4px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.file-upload:hover {
+  background: #263727;
+}
+
+.file-upload:active {
+  background: #000;
+}
+
+.file-upload input[type="file"]{
+  display: none; /* Обязательно скрываем настоящий Input File */
+}
+.file-upload label {
+  /* Растягиваем label на всю возможную площадь блока .file-upload */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.file-upload span {
+  line-height: 36px; /* Делаем вертикальное выравнивание текста, который написан на кнопке */
+}
+
+canvas {border:0px solid #000;}

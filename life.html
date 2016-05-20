@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Life Game : by Damir Shaikhislamov 2016</title>
+    <link href="style.css" rel="stylesheet" media="all" />
+</head>
+
+<div id="body">
+    <h1>Life Game</h1>
+    <h2>by Damir Shaikhislamov 2016</h2>
+
+<div id="content"></div>
+<!--<canvas id="a" width="350" height="350"></canvas>-->
+<button onclick="Play();">Play</button>
+<button onclick="Pause();">Pause</button>
+<button onclick="Start();">Step</button>
+<button onclick="CreateField();Print(field);">Create map</button>
+<button onclick="CleanField();Print(field);">Clean map</button>
+<save id="mapsave"></save>
+
+    <div class="file-upload">
+        <label>
+            <input type="file" name="file" onchange="processFiles(this.files)">
+            <span>Download map</span>
+        </label>
+    </div>
+</div>
+
+
+<script src="life.js" type="text/javascript"></script>
+</html>
