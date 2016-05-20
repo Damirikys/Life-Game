@@ -1,6 +1,8 @@
 var div = document.getElementById('content');
+var live = document.getElementById('live');
 // var canvas = document.getElementById("a");
 // var context = canvas.getContext("2d");
+var liveCount = 0;
 var size = 50;
 //var parametr = 3.5;
 var field = [];
@@ -36,9 +38,11 @@ function CleanField() {
 
 function Print(array) {
     var string = "";
+    liveCount = 0;
     for (var i = 0; i < size; i++) {
         for (var j = 0; j < size; j++) {
             var type = (array[i][j]) ? "true" : "false";
+            if(type == "true") liveCount++;
             string += "<cell x='"+ i + "' y='"+ j
                    + "' onmouseover='CellClick(this, false);' onclick='CellClick(this, true);' class='"
                    + type +"'>x</cell>";
@@ -47,6 +51,7 @@ function Print(array) {
     }
 
     div.innerHTML = string;
+    live.innerHTML = liveCount;
     document.getElementById('mapsave').innerHTML =
         '<a id="mapsave" href="data:text/plain;charset=utf-8,%EF%BB%BF'
         + encodeURIComponent(SaveMap())
@@ -91,10 +96,11 @@ function CellClick(cell, click) {
     var type = cell.getAttribute("class");
 
     if(type == "true")
-        cell.setAttribute("class", "false"), field[i][j] = false;
+        cell.setAttribute("class", "false"), field[i][j] = false, liveCount--;
     else
-        cell.setAttribute("class", "true"), field[i][j] = true;
+        cell.setAttribute("class", "true"), field[i][j] = true, liveCount++;
 
+    live.innerHTML = liveCount;
     document.getElementById('mapsave').innerHTML =
         '<a id="mapsave" href="data:text/plain;charset=utf-8,%EF%BB%BF'
         + encodeURIComponent(SaveMap())
